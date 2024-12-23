@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Protected Note</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+        }
+        .note-box {
+            display: none;
+            margin-top: 20px;
+            padding: 10px;
+            border: 2px solid #2980b9;
+            background-color: #e8f0f2;
+            border-radius: 8px;
+        }
+        .error {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Password Protected Note</h1>
+        <input type="password" id="password" placeholder="Enter Password">
+        <button onclick="checkPassword()">Submit</button>
+        <div id="error" class="error"></div>
+        <div id="note" class="note-box">
+            <h2>Note Box</h2>
+            <p><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> clock </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        .clock {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+        .date {
+            font-size: 20px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Clock with Nanoseconds and Microseconds</h1>
+    <div class="date" id="date"></div>
+    <div class="clock" id="clock"></div>
+
+    <script>
+        function formatDate(date) {
+            const options = {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            };
+            return date.toLocaleDateString(undefined, options);
+        }
+
+        function updateClock() {
+            const now = new Date();
+
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            const milliseconds = String(now.getMilliseconds()).padStart(3, '0');
+            const microseconds = String(Math.floor(now.getMilliseconds() * 1000)).padStart(6, '0');
+            const nanoseconds = String(Math.floor(now.getMilliseconds() * 1000000)).padStart(9, '0');
+
+            document.getElementById('clock').innerText = `Time: ${hours}:${minutes}:${seconds}.${milliseconds} (Microseconds: ${microseconds}, Nanoseconds: ${nanoseconds})`;
+            document.getElementById('date').innerText = `Date: ${formatDate(now)}`;
+        }
+
+        setInterval(updateClock, 1);
+    </script>
+</body>
+</html>
+</p>
+        </div>
+    </div>
+
+    <script>
+        function checkPassword() {
+            const passwordInput = document.getElementById('password').value;
+            const noteBox = document.getElementById('note');
+            const errorMessage = document.getElementById('error');
+
+            // Set the correct password
+            const correctPassword = 'SBRJC';
+
+            if (passwordInput === correctPassword) {
+                noteBox.style.display = 'block';
+                errorMessage.textContent = '';
+            } else {
+                errorMessage.textContent = 'Incorrect password. Please try again.';
+                noteBox.style.display = 'none';
+            }
+        }
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
